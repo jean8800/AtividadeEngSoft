@@ -17,6 +17,7 @@ public class SistemaDeCompras {
         ArrayList<Produto> carrinho = new ArrayList<>();
 
         while (true) {
+            System.out.println("Abaixo está o Menu, escolha um item");
             System.out.println("\nMENU:");
             System.out.println("1. Adicionar produto ao carrinho");
             System.out.println("2. Visualizar carrinho");
@@ -63,6 +64,18 @@ public class SistemaDeCompras {
                     return;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
+
+                case 5;
+                    System.out.println("\nDigite o número do produto a ser removido: ");
+                    int index = scanner.nextInt() - 1;
+                    if (index >= 0 && index < carrinho.size()) {
+                        carrinho.remove(index);
+                        System.out.println("Produto removido com sucesso!");
+                    } else {
+                        System.out.println("Número inválido!");
+                    }
+                    break;
+
             }
         }
     }
